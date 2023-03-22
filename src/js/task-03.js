@@ -14,14 +14,13 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery') // select ul gallery 
-
 // function to create a card
 
 const makeGalleryCard = ({ width, height, url, alt } = {}) => {
   return `
     <li>
       <a href="#">
-        <img src="${url}" alt="${alt}" width="${width}" height="${height}">
+        <img src="${url}" alt="${alt}">
       </a>
     </li>
   `;
@@ -31,7 +30,7 @@ const galleryCardsArray = images.map(image => {
   return makeGalleryCard(image);
 });
 // console.log(galleryCardsArray);
-const result = gallery.insertAdjacentHTML('beforeend', galleryCardsArray.join(''));
+const result = gallery.insertAdjacentHTML('beforeend', galleryCardsArray.join('')); // display and join
 
 /*
 <li>
