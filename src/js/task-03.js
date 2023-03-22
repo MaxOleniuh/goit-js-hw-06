@@ -16,7 +16,7 @@ const images = [
 const gallery = document.querySelector('.gallery') // select ul gallery 
 // function to create a card
 
-const makeGalleryCard = ({ width, height, url, alt } = {}) => {
+const makeGalleryCard = ({url, alt } = {}) => {
   return `
     <li>
       <a href="#">
