@@ -4,22 +4,17 @@ const dataLength = input.getAttribute('data-length')
 const inputBlurHandler = (event) => {
     const userInputLength = Number(event.currentTarget.value.length)
     const defaultInputLength = Number(input.dataset.length);
-    
+
     console.log(input.dataset.length)
     if (userInputLength === defaultInputLength) {
         input.classList.add('valid');
         input.classList.remove('invalid');
     }
     else if (userInputLength !== defaultInputLength) {
-                   input.classList.add('invalid');
+         input.classList.add('invalid');
         input.classList.remove('valid');
-
     }
-    
-
 };
-
-
 
 input.addEventListener('blur', inputBlurHandler);
 
