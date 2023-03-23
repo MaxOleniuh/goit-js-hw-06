@@ -9,7 +9,7 @@ const inputRangeHandler = (e => {
 
 
 
-inputEl.addEventListener('input', inputRangeHandler)
+inputEl.addEventListener('input', inputRangeHandler);
 
 
 
