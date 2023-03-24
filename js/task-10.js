@@ -3,10 +3,35 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
-const amount = document.querySelector('input').textContent;
+const input = document.querySelector('#controls input');
 const btnCreate = document.querySelector('button[data-create]');
 const btnDestroy = document.querySelector('button[data-destroy]');
-const boxes = document.querySelector('#boxes');
+const allBoxes = document.querySelector('#boxes');
+
+btnCreate.addEventListener('click', createBoxes);
+btnDestroy.addEventListener('click', destroyBoxes);
+
+let size = 30;
+
+function createBoxes(amount) {
+  amount = input.value;
+  const color = getRandomHexColor();
+  let boxes = '';
+  for (let i = 0; i < amount; i++) {
+    const box = `<div style="background-color:${color};width:${size}px;
+    height:${size}px"></div>`;
+    boxes += box;
+    size += 10;
+  }
+
+  allBoxes.insertAdjacentHTML('beforeend', boxes);
+}
+
+function destroyBoxes () {
+  allBoxes.innerHTML = '';
+  size = 30;
+}
+
 /*
 Напиши скрипт створення і очищення колекції елементів.
  Користувач вводить кількість елементів в input і 
