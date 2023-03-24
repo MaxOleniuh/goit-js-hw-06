@@ -4,7 +4,7 @@ const output = document.querySelector('#name-output');
 
 const enterNameInputHandler = event => {
     if (input === '') {
-        output.textContent = 'Anonymus'
+        output.textContent = 'Anonymous'
     }
     else 
     output.textContent = event.currentTarget.value;

@@ -7,8 +7,6 @@ const amount = document.querySelector('input').textContent;
 const btnCreate = document.querySelector('button[data-create]');
 const btnDestroy = document.querySelector('button[data-destroy]');
 const boxes = document.querySelector('#boxes');
-
-
 /*
 Напиши скрипт створення і очищення колекції елементів.
  Користувач вводить кількість елементів в input і 
