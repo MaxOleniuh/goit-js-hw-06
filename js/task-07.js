@@ -1,17 +1,12 @@
-const textEl = document.querySelector('#text');
-const inputEl = document.querySelector('#font-size-control');
+const textEl = document.querySelector("#text");
+const inputEl = document.querySelector("#font-size-control");
 
+const inputRangeHandler = (e) => {
+  const size = e.target.value;
+  textEl.style.fontSize = size + "px";
+};
 
-const inputRangeHandler = (e => {
-    const size = e.target.value;
-  textEl.style.fontSize = size + 'px';
-});
-
-
-
-inputEl.addEventListener('input', inputRangeHandler);
-
-
+inputEl.addEventListener("input", inputRangeHandler);
 
 /* 
 Напиши скрипт, який реагує на зміну значення 

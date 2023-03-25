@@ -1,22 +1,22 @@
 const images = [
   {
-    url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    alt: 'White and Black Long Fur Cat',
+    url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "White and Black Long Fur Cat",
   },
   {
-    url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+    url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "Orange and White Koi Fish Near Yellow Koi Fish",
   },
   {
-    url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    alt: 'Group of Horses Running',
+    url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "Group of Horses Running",
   },
 ];
 
-const gallery = document.querySelector('.gallery') // select ul gallery 
+const gallery = document.querySelector(".gallery"); // select ul gallery
 // function to create a card
 
-const makeGalleryCard = ({url, alt} = {}) => {
+const makeGalleryCard = ({ url, alt } = {}) => {
   return `
     <li>
       <a href="#">
@@ -25,12 +25,15 @@ const makeGalleryCard = ({url, alt} = {}) => {
     </li>
   `;
 };
-// creating an array with cards 
-const galleryCardsArray = images.map(image => {
+// creating an array with cards
+const galleryCardsArray = images.map((image) => {
   return makeGalleryCard(image);
 });
 // console.log(galleryCardsArray);
-const result = gallery.insertAdjacentHTML('beforeend', galleryCardsArray.join('')); // display and join
+const result = gallery.insertAdjacentHTML(
+  "beforeend",
+  galleryCardsArray.join("")
+); // display and join
 
 /*
 <li>

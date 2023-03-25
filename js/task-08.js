@@ -1,23 +1,23 @@
-const form = document.querySelector('.login-form');
+const form = document.querySelector(".login-form");
 
-const formSubmitHandler = (e => {
-    e.preventDefault(); // 2
-    const email = form.elements.email.value;
-    const password = form.elements.password.value;
-    if (email === '' || password === '') {
-        alert('All fields should be filled!');
-    } // 3
-    const userData = {
-        email,
-        password,
-    };
-    console.log(userData); // 4
-    e.target.reset(); // 5
-});
+const formSubmitHandler = (e) => {
+  e.preventDefault(); // 2
+  const email = form.elements.email.value;
+  const password = form.elements.password.value;
+  if (email === "" || password === "") {
+    alert("All fields should be filled!");
+  } // 3
+  const userData = {
+    email,
+    password,
+  };
+  if (email !== "" && password !== "") {
+    console.log(userData);
+  } // 4
+  e.target.reset(); // 5
+};
 
-
-
-form.addEventListener('submit', formSubmitHandler);// 1
+form.addEventListener("submit", formSubmitHandler); // 1
 
 /*
 1. Обробка відправлення форми form.login-form 

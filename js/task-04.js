@@ -1,40 +1,19 @@
-
-const counter = document.querySelector('#value')
+const counter = document.querySelector("#value");
 let counterValue = 0;
-const buttonAdd = document.querySelector('.button-plus');
-const buttonRemove = document.querySelector('.button-remove');
+const buttonAdd = document.querySelector(".button-plus");
+const buttonRemove = document.querySelector(".button-remove");
 
-
-const counterAddClickHandler = event => {
-    counterValue += 1;
-    counter.textContent = counterValue;
-     
+const counterAddClickHandler = (event) => {
+  counterValue += 1;
+  counter.textContent = counterValue;
 };
-const counterRemoveClickHandler = event => {
-      counterValue -= 1;
-    counter.textContent = counterValue;
+const counterRemoveClickHandler = (event) => {
+  counterValue -= 1;
+  counter.textContent = counterValue;
 };
 
-buttonAdd.addEventListener('click', counterAddClickHandler);
-buttonRemove.addEventListener('click', counterRemoveClickHandler)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+buttonAdd.addEventListener("click", counterAddClickHandler);
+buttonRemove.addEventListener("click", counterRemoveClickHandler);
 
 /*
 Лічильник складається зі спану і кнопок, які по кліку повинні збільшувати і зменшувати його значення на одиницю.

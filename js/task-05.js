@@ -1,29 +1,13 @@
-const input = document.querySelector('#name-input');
-console.log(input);
-const output = document.querySelector('#name-output');
+const input = document.querySelector("#name-input");
+const output = document.querySelector("#name-output");
 
-const enterNameInputHandler = event => {
-    if (input === '') {
-        output.textContent = 'Anonymous'
-    }
-    else 
-    output.textContent = event.currentTarget.value;
-}
+const enterNameInputHandler = (event) => {
+  if (input.value === '') {
+    output.textContent = "Anonymous";
+  } else output.textContent = event.target.value;
+};
 
-input.addEventListener('input', enterNameInputHandler)
-
-
-
-
-
-
-
-
-
-
-
-
-
+input.addEventListener("input", enterNameInputHandler);
 
 /*
 Напиши скрипт, який під час набору тексту в інпуті input#name - input(подія input),

@@ -1,22 +1,21 @@
-const input = document.querySelector('#validation-input');
-const dataLength = input.getAttribute('data-length')
+const input = document.querySelector("#validation-input");
 
 const inputBlurHandler = (event) => {
-    const userInputLength = Number(event.currentTarget.value.length)
-    const defaultInputLength = Number(input.dataset.length);
+  const userInputLength = event.target.value.length;
+  const dataLength = input.getAttribute("data-length");
 
-    console.log(input.dataset.length)
-    if (userInputLength === defaultInputLength) {
-        input.classList.add('valid');
-        input.classList.remove('invalid');
-    }
-    else if (userInputLength !== defaultInputLength) {
-         input.classList.add('invalid');
-        input.classList.remove('valid');
-    }
+  if (userInputLength === +dataLength) {
+    changeClass('valid', 'invalid');
+  }
+  else {
+    changeClass('invalid', 'valid');
+  }
 };
-
-input.addEventListener('blur', inputBlurHandler);
+function changeClass(add, remove) {
+    input.classList.add(add);
+    input.classList.remove(remove);
+}
+input.addEventListener("blur", inputBlurHandler);
 
 /*
 Напиши скрипт, який під час втрати фокусу на інпуті(подія blur),
