@@ -6,14 +6,13 @@ const formSubmitHandler = (e) => {
   const password = form.elements.password.value;
   if (email === "" || password === "") {
     alert("All fields should be filled!");
+    return;
   } // 3
   const userData = {
     email,
     password,
   };
-  if (email !== "" && password !== "") {
-    console.log(userData);
-  } // 4
+  console.log(userData);
   e.target.reset(); // 5
 };
 
